@@ -10,16 +10,17 @@
            
            document.getElementById("addBtn").addEventListener(
                "click",function(){
+                let inputObj = document.getElementById("inputMsg");
                 let msg = document.getElementById("inputMsg").value;
                 if(msg != ''){//falcy value
                     const ul = document.getElementById("ulList");
                     const li = document.createElement("li");
                     li.innerText = msg;
                     ul.append(li);
-                    document.getElementById("inputMsg").value = '';
-                    document.getElementById("inputMsg").focus();
+                    inputObj.value = '';
+                    inputObj.focus();
                 }else{
-                    document.getElementById("inputMsg").focus();
+                    inputObj.focus();
                 }
             });
            
